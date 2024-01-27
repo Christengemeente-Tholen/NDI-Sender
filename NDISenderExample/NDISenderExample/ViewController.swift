@@ -155,13 +155,14 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func onClick(_ sender: UIBarItem) {
+    @IBAction func onClick(_ sender: UIBarButtonItem) {
         if !cameraManager.isSending {
             cameraManager.startSending()
         } else {
             cameraManager.stopSending()
         }
         sender.image = UIImage(systemName: "record.circle\( cameraManager.isSending ? ".fill": "" )")
+        sender.tintColor = cameraManager.isSending ? .systemGray : .systemRed
     }
     
     override func viewDidAppear(_ animated: Bool) {
