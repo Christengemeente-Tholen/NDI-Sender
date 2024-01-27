@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NDI_Sender" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="2rO-f4-egg">
+                                <rect key="frame" x="0.0" y="779.33333333333337" width="393" height="38.666666666666629"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="oq9-Gj-Zpp"/>
+                                    <barButtonItem title="Item" width="50" id="BP4-Ua-I0s" userLabel="Change Resolution">
+                                        <imageReference key="image" image="arrow.up.left.and.arrow.down.right" catalog="system" symbolScale="large"/>
+                                        <menu key="menu" id="BNm-uC-aS8">
+                                            <children>
+                                                <command title="720p" id="sa8-Fd-hq9"/>
+                                                <command title="1080p" id="O6d-9K-gbc"/>
+                                            </children>
+                                        </menu>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="60b-dj-jWi"/>
+                                    <barButtonItem title="Switch mic" image="mic" catalog="system" id="0h1-a5-6qq" userLabel="Switch mic">
+                                        <connections>
+                                            <action selector="useMic:" destination="BYZ-38-t0r" id="8hm-hO-QhR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dCo-Dh-Jdo"/>
+                                    <barButtonItem title="Item" width="50" id="h1i-px-wrz" userLabel="Switch Camera">
+                                        <imageReference key="image" image="arrow.triangle.2.circlepath.camera.fill" catalog="system" symbolScale="large"/>
+                                        <connections>
+                                            <action selector="SwitchCamera:" destination="BYZ-38-t0r" id="whq-8s-ihR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="91U-P7-g94"/>
+                                    <barButtonItem title="Start" width="50" id="q0Z-DZ-Vw0" userLabel="Send">
+                                        <imageReference key="image" image="record.circle" catalog="system" symbolScale="large"/>
+                                        <connections>
+                                            <action selector="onClick:" destination="BYZ-38-t0r" id="W72-3l-XGc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pZC-cB-z18"/>
+                                    <barButtonItem title="Item" image="flashlight.off.fill" catalog="system" width="50" id="WMz-KN-kuZ" userLabel="Flashlight">
+                                        <connections>
+                                            <action selector="flashlight:" destination="BYZ-38-t0r" id="4ui-ZL-C41"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="u0G-aM-h86"/>
+                                    <barButtonItem title="Show gridlines" image="grid" catalog="system" id="6f1-EV-zDb">
+                                        <connections>
+                                            <action selector="gridLines:" destination="BYZ-38-t0r" id="zDl-u1-bgV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="u5S-hb-NUe"/>
+                                    <barButtonItem title="Show level" image="level" catalog="system" id="pvX-kL-HNp" userLabel="Show level">
+                                        <connections>
+                                            <action selector="showLevel:" destination="BYZ-38-t0r" id="X4Z-oc-rTh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Azg-ra-E8d"/>
+                                </items>
+                            </toolbar>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L4a-e1-FX4">
+                                <rect key="frame" x="42" y="767" width="309" height="4"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                            </progressView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="minus" catalog="system" id="H4n-wc-u54">
+                                <rect key="frame" x="16" y="767" width="18" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Y4w-6S-btL">
+                                <rect key="frame" x="359" y="758" width="18" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nz7-rG-caf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2rO-f4-egg" firstAttribute="bottom" secondItem="Nz7-rG-caf" secondAttribute="bottom" id="7hk-ps-gF8"/>
+                            <constraint firstItem="2rO-f4-egg" firstAttribute="trailing" secondItem="Nz7-rG-caf" secondAttribute="trailing" id="GU1-QY-LTj"/>
+                            <constraint firstItem="2rO-f4-egg" firstAttribute="top" secondItem="H4n-wc-u54" secondAttribute="bottom" id="ULT-6v-Ho7"/>
+                            <constraint firstItem="2rO-f4-egg" firstAttribute="leading" secondItem="Nz7-rG-caf" secondAttribute="leading" id="cc5-4p-0Od"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resolutionMenu" destination="BP4-Ua-I0s" id="kPk-Kz-JSl"/>
+                        <outlet property="zoomProgressBar" destination="L4a-e1-FX4" id="bE6-c1-1NS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.89312977099236" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.triangle.2.circlepath.camera.fill" catalog="system" width="128" height="93"/>
+        <image name="arrow.up.left.and.arrow.down.right" catalog="system" width="128" height="115"/>
+        <image name="flashlight.off.fill" catalog="system" width="72" height="128"/>
+        <image name="grid" catalog="system" width="128" height="113"/>
+        <image name="level" catalog="system" width="128" height="57"/>
+        <image name="mic" catalog="system" width="110" height="128"/>
+        <image name="minus" catalog="system" width="128" height="26"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="record.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
