@@ -5,6 +5,6 @@
       location = "group:NDIWrapper/NDIWrapper.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/zjobse/code/xcode/NDISenderExample/NDISenderExample/NDI Sender.xcodeproj">
+      location = "group:NDISenderExample/NDI Sender.xcodeproj">
    </FileRef>
 </Workspace>
